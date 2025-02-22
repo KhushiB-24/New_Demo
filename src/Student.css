@@ -1,0 +1,10 @@
+.st{
+    background-image: radial-gradient(pink, purple);
+    height: 200px;
+    width: 300px;
+    margin: 30px;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    border-radius: 30px;
+}
