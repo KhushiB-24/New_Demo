@@ -7,7 +7,7 @@ function SignUp(){
     var p = "Khushi123";
 
     var[name, setName] = useState();
-    var navigate = useNavigate()
+    var navigate = useNavigate();
 
     var inp = (a)=>{
         setName(a.target.value);

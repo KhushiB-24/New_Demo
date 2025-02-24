@@ -15,6 +15,7 @@ function App(){
   return(
     <div>
       <BrowserRouter>
+        <Contact/>
         <Nav/>
         <Routes>
         <Route path='/home' element={<Home/>}></Route>
