@@ -10,12 +10,15 @@ import Home from './Componants/Home';
 import About from './Componants/About';
 import Contact from './Componants/Contact';
 import SignUp from './Componants/SignUp';
+import Show from './Componants/Show';
+import Filter from './Componants/Filter';
 
 function App(){
   return(
     <div>
       <BrowserRouter>
         <Contact/>
+
         <Nav/>
         <Routes>
         <Route path='/home' element={<Home/>}></Route>

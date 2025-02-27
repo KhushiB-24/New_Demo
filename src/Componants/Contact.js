@@ -3,17 +3,17 @@ import './Main.css';
 import axios from 'axios';
 function Contact(){
 
-    var[mob, setMob] = useState({id:'', mName:'', brand:'', price:'', image:''});
+    const[movie, setMovie] = useState({id:'', title:'', release_date:'', genere:'', director:''});
 
     var hChange = (e) =>{
         var{name, value} = e.target;
-        setMob({...mob, [name]:value});
+        setMovie({...movie, [name]:value});
     }
 
-    var[res, setRes] = useState("");
+    const[res, setRes] = useState("");
     var handleSubmit = (e)=>{
         e.preventDefault();
-        axios.post("http://localhost:8080/mobile", mob).then(()=>{setRes("Added successfully")}).catch(()=>{setRes("Something wents wrong")});
+        axios.post("http://localhost:8080/movies", movie).then(()=>{setRes("Added successfully")}).catch(()=>{setRes("Something wents wrong")});
     }
 
     return(
@@ -21,17 +21,17 @@ function Contact(){
             <h1>Hello From Contact</h1>
 
             <form onSubmit={handleSubmit}>
-                <input name="id" value={mob.id} onChange={hChange} />
-                <input name="mName" value={mob.mName} onChange={hChange} />
-                <input name="brand" value={mob.brand} onChange={hChange} />
-                <input name="price" value={mob.price} onChange={hChange} />
-                <input name="image" value={mob.image} onChange={hChange} />
+                <input name="id" value={movie.id} onChange={hChange} />
+                <input name="title" value={movie.title} onChange={hChange} />
+                <input name="release_date" value={movie.release_date} onChange={hChange} />
+                <input name="genere" value={movie.genere} onChange={hChange} />
+                <input name="director" value={movie.director} onChange={hChange} />
 
                 <button type='submit'>Submit</button>
 
-                <h1>{mob.mName}</h1>
-                <h1>{mob.brand}</h1>
-                <h1>{mob.price}</h1>
+                <h1>{movie.title}</h1>
+                <h1>{movie.release_date}</h1>
+                <h1>{movie.genere}</h1>
             </form>
         </div>
     )
